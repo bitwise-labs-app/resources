@@ -1,0 +1,56 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/idkhow-app/schemas/main/course-manifest.json",
+    "title": "Course",
+    "type": "object",
+    "properties": {
+        "courseName": {
+            "type": "string",
+            "description": "The name of the course"
+        },
+        "courseAuthors": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "A list of people who created the course"
+        },
+        "includeDir": {
+            "type": "string",
+            "description": "Optional directory to include additional resources"
+        },
+        "appendToBody": {
+            "type": "string",
+            "description": "Path to extra HTML that should be added to the end of generated pages"
+        },
+        "index": {
+            "type": "string",
+            "description": "Path to the course's index page"
+        },
+        "extraCourseInternalPages": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Optional list of additional pages that are not lessons"
+        },
+        "content": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "chapterName": {
+                        "type": "string",
+                        "description": "The name of the chapter"
+                    },
+                    "lessons": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "description": "The lessons in the chapter"
+                    }
+                },
+                "required": [ "chapterName", "lessons" ],
+                "additionalProperties": false
+            },
+            "description": "The course's content"
+        }
+    },
+    "required": [ "courseName", "courseAuthors", "index", "content" ],
+    "additionalProperties": false
+}
