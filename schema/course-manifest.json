@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/idkhow-app/schemas/main/course-manifest.json",
+    "$id": "https://raw.githubusercontent.com/bitwize-app/resources/main/schema/course-manifest.json",
     "title": "Course",
     "type": "object",
     "properties": {
