@@ -25,6 +25,10 @@
             "type": "string",
             "description": "Path to the course's index page"
         },
+        "indexCustomTitle": {
+            "type": "string",
+            "description": "Change the title of the index from \"Welcome to the {{ courseName }} course!\" to something else"
+        },
         "extraCourseInternalPages": {
             "type": "array",
             "items": { "type": "string" },
